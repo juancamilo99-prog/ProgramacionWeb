@@ -1,0 +1,165 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ffffff;
+	color: #000;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* cabezote */
+header {
+	background-color: yellow;
+	font-family: Arial;
+	padding: 0px;
+	margin: 0px;
+}
+header h1 {
+	margin: 0px;
+	padding: 10px;
+	font-size: 250%;
+	text-align: middle;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1024px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 1px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header"
+						 "menu menu menu"
+						 "content content sidebar"
+						 "footer footer footer";
+}
+
+.wrapper .header {
+	/*grid-column-start: 1;
+	grid-column-end: 4;*/
+	grid-area: header;
+}
+
+.wrapper .content {
+	/*grid-column: span 2;*/
+	grid-area: content;
+}
+
+.wrapper .menu {
+	grid-area: menu;
+}
+
+/* menu horizontal */
+.menu_hor {
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: green;
+}
+.menu_hor li {
+  float: left;
+  border-right: 1px solid yellow;
+}
+.menu_hor li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+.menu_hor li:last-child {
+  border-right: none;
+}
+
+/* maquetación productos y banners */
+section .content { 
+	width: 73%; 
+	float: left;
+	margin-left: 10px;	
+}
+aside {
+	list-style-type: none;
+	width: 100%;
+	float: left;
+	margin-top: 4px;
+
+}
+aside img {
+	width: 100%;
+	margin-top: 4px;
+	float: left;
+	
+}
+article {
+	clear: both;
+	/*border-bottom: dashed gray 1px;*/
+}
+article img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+
+.wrapper aside {
+	/*grid-column: 3 / 4;*/
+	/*grid-row: span 1;*/
+	grid-area: sidebar;
+}
+
+
+/* pie de página */
+footer {
+	clear: both;
+	background-color: yellow;
+	margin: 0px;
+	padding: 5px;
+	border-top: 2px solid black;
+	font-family: Arial;
+}
+
+.wrapper footer {
+	/*grid-column: span 3;*/
+	grid-area: footer;
+}
+
+/*ANCHO >= 480px y < 800px*/
+
+@media(max-width: 480px){
+	.wrapper {
+		grid-template-areas: "header"
+							  "menu"
+							 "content"
+							 "sidebar"
+						     "footer";
+	}
+}
+
+/*ANCHO > 800px*/
+
+@media(min-width: 800px){
+	.wrapper {
+		grid-template-areas: "header header header"
+							 "menu content sidebar"
+						     "menu footer footer";
+	}
+
+	.menu {
+		background-color: green ;
+	}
+
+	nav ul {
+		display: flex;
+	}
+
+	nav ul li {
+		flex-direction: column;
+	}
+}
+
