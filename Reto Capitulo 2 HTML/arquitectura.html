@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Web</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/info.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="icon-codeopen">Programación Web</h1>
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>   
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="banner">
+            <img src="img/hero.jpg" alt="Programación">
+            <div class="container">
+                <h2>Aprende algo nuevo</h2>
+                <p>La mejor información esta aquí</p>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="container">
+                <h2>Arquitectura Cliente / Servidor</h2> 
+                <p>
+                    
+                    Arquitectura Cliente servidor. Esta arquitectura consiste básicamente en un cliente que realiza peticiones a otro programa (el servidor) que le da respuesta. Aunque esta idea se puede aplicar a programas que se ejecutan sobre una sola computadora es más ventajosa en un sistema operativo multiusuario distribuido a través de una red de computadoras. La interacción cliente-servidor es el soporte de la mayor parte de la comunicación por redes. Ayuda a comprender las bases sobre las que están construidos los algoritmos distribuidos.
+                </p>
+                <img id="Im1" src="img/cliente-servidor.jpeg" alt="cliente-servidor">
+            </div>
+            <div class="container">
+            <nav class="enlace">
+                <br>
+                <ul>
+                    <li>
+                        <a href="#introduccion">1. Introducción</a>
+                    </li>
+                    <li>
+                        <a href="#evolucion">2. Evolución</a>
+                    </li>
+                    <li>
+                        <a href="#partes">3. Componentes del sistema</a>
+                    </li>
+                    <li>
+                        <a href="#clasificacion">4. Clasificación de los servidores</a>
+                    </li>
+                    <li>
+                        <a href="#ventajas">5. Ventajas y Desventajas</a>
+                    </li>
+                    <li>
+                        <a href="#fuentes">6. Fuentes</a>
+                    </li>
+                </ul>
+            </nav>
+            <section id="introduccion">
+                <br><br><h2>Introducción</h2>
+                <p> <br>
+                    El servidor debe negociar con su Sistema Operativo un puerto (casi siempre bien conocido) donde esperar las solicitudes. El servidor espera pasivamente las peticiones en un puerto bien conocido que ha sido reservado para el servicio que ofrece. El cliente también solicita, a su sistema operativo, un puerto no usado desde el cual enviar su solicitud y esperar respuesta. Un cliente ubica un puerto arbitrario, no utilizado y no reservado, para su comunicación.
+                    En una interacción se necesita reservar solo uno de los dos puertos, asignados un identificador único de puerto para cada servicio, se facilita la construcción de clientes y servidores.
+                    Los servidores por lo general son más difíciles de construir que los clientes pues aunque se implantan como programas de aplicación deben manejar peticiones concurrentes, así como reforzar todos los procedimientos de acceso y protección del sistema computacional en el que corren, y protegerse contra todos los errores posibles. El cliente y el servidor pueden interactuar en la misma máquina.
+                </p>
+            </section>
+
+                <section id="evolucion">
+                    <h2>Evolución</h2>
+                    <br>
+                    <p>
+                        <h3>Computadora central</h3>
+                        <br>
+                        <p>Desde sus inicios el modelo de administración de datos a través de computadoras se basaba en el uso de terminales remotas, que se conectaban de manera directa a una computadora central. Dicha computadora central se encargaba de prestar servicios caracterizados por que cada servicio se prestaba solo a un grupo exclusivo de usuarios.</p>
+                        <br><h3>Computadoras dedicadas</h3>
+                        <br>
+                        <p>Esta es la era en la que cada servicio empleaba su propia computadora que permitía que los usuarios de ese servicio se conectaran directamente. Esto es consecuencia de la aparición de computadoras pequeñas, de fácil uso, más baratas y más poderosas de las convencionales.</p>
+                        <br>
+                        <h3>Conexión libre</h3>
+                        <br>
+                        <p>Hace más de 10 años que las computadoras escritorio aparecieron de manera masiva. Esto permitió que parte apreciable de la carga de trabajo de cómputo tanto en el ámbito de cálculo como en el ámbito de la presentación se lleven a cabo desde el escritorio del usuario. En muchos de los casos el usuario obtiene la información que necesita de alguna computadora de servicio. Estas computadoras de escritorio se conectan a las computadoras de servicio empleando software que permite la emulación de algún tipo de terminal. En otros de los casos se les transfiere la información haciendo uso de recursos magnéticos o por trascripción.</p>
+                        <br>
+                        <h3>Cómputo a través de redes</h3>
+                        <br>
+                        <p>Esta es la era que esta basada en el concepto de redes de computadoras, en la que la información reside en una o varias computadoras, los usuarios de esta información hacen uso de computadoras para laborar y todas ellas se encuentran conectadas entre si. Esto brinda la posibilidad de que todos los usuarios puedan acceder a la información de todas las computadoras y a la vez que los diversos sistemas intercambien información.</p>
+                        <br>
+                        <h3>Arquitectura cliente-servidor</h3>
+                        <br>
+                        En esta arquitectura la computadora de cada uno de los usuarios, llamada cliente, produce una demanda de información a cualquiera de las computadoras que proporcionan información, conocidas como servidores estos últimos responden a la demanda del cliente que la produjo.
+                        Los clientes y los servidores pueden estar conectados a una red local o una red amplia, como la que se puede implementar en una empresa o a una red mundial como lo es la Internet.
+                        Bajo este modelo cada usuario tiene la libertad de obtener la información que requiera en un momento dado proveniente de una o varias fuentes locales o distantes y de procesarla como según le convenga. Los distintos servidores también pueden intercambiar información dentro de esta arquitectura.
+                    </p>
+                </section>
+
+                <section id="partes">
+                    <h2>Partes que componen el sistema</h2>
+                    <br>
+                    <p>
+                        <p>Cliente: Programa ejecutable que participa activamente en el establecimiento de las conexiones. Envía una petición al servidor y se queda esperando por una respuesta. Su tiempo de vida es finito una vez que son servidas sus solicitudes, termina el trabajo.</p> <br>
+                        <p>Servidor: Es un programa que ofrece un servicio que se puede obtener en una red. Acepta la petición desde la red, realiza el servicio y devuelve el resultado al solicitante. Al ser posible implantarlo como aplicaciones de programas, puede ejecutarse en cualquier sistema donde exista TCP/IP y junto con otros programas de aplicación. El servidor comienza su ejecución antes de comenzar la interacción con el cliente. Su tiempo de vida o de interacción es “interminable”.
+                        Los servidores pueden ejecutar tareas sencillas (caso del servidor hora día que devuelve una respuesta) o complejas (caso del servidor ftp en el cual se deben realizar operaciones antes de devolver una respuesta). Los servidores sencillos procesan una petición a la vez (son secuenciales o interactivos), por lo que no revisan si ha llegado otra petición antes de enviar la respuesta de la anterior.</p>
+                        <br>
+                        <p>Los más complejos trabajan con peticiones concurrentes aún cuando una sola petición lleve mucho tiempo para ser servida (caso del servidor ftp que debe copiar un archivo en otra máquina). Son complejos pues tienen altos requerimientos de protección y autorización. Pueden leer archivos del sistema, mantenerse en línea y acceder a datos protegidos y a archivos de usuarios. No puede cumplir a ciegas las peticiones de los clientes, deben reforzar el acceso al sistema y las políticas de protección. Los servidores por lo general tienen dos partes: </p>
+                        <br>
+                        <p> 1. Programa o proceso que es responsable de aceptar nuevas peticiones: Maestro o Padre.</p>
+                        <br>
+                        <p>2. Programas o procesos que deben manejar las peticiones individuales: Esclavos o Hijos.</p>
+                    </p>
+                </section>
+
+                <section id="clasificacion">
+                    <h2>Clasificación</h2>
+                    <center>
+                    <table> 
+                        <tr>
+                            <td><p>1. Servidores con estado</p>
+                                <p>2. Servidores sin estado</p>
+                                <p>3. Servidores concurrentes</p></td>
+                            <td><img src="img/c-s.jpg" alt="cliente-servidor"></td>
+                        </tr>
+                    </table>
+                </center>
+                </section>
+
+                <section id="ventajas">
+                    <h2>Ventajas y Desventajas</h2>
+                    <br><br><p><h3>Ventajas del esquema Cliente/servidor</h3></p> <br>
+                    <p>
+                        <p>1. Facilita la integración entre sistemas diferentes y comparte información, permitiendo por ejemplo que las máquinas ya existentes puedan ser utilizadas pero utilizando interfaces más amigables el usuario. De esta manera, se puede integrar PCs con sistemas medianos y grandes, sin necesidad de que todos tengan que utilizar el mismo sistema operativo.</p>
+                        <br>
+                        <p>2. Al favorecer el uso de interfaces gráficas interactivas, los sistemas construidos bajo este esquema tienen una mayor y más intuitiva con el usuario. En el uso de interfaces gráficas para el usuario, presenta la ventaja, con respecto a uno centralizado, de que no siempre es necesario transmitir información gráfica por la red pues esta puede residir en el cliente, lo cual permite aprovechar mejor el ancho de banda de la red.</p>
+                        <br>
+                        <p>3. La estructura inherentemente modular facilita además la integración de nuevas tecnologías y el crecimiento de la infraestructura computacional, favoreciendo así la escalabilidad de las soluciones.
+                        Contribuye además a proporcionar a los diferentes departamentos de una organización, soluciones locales, pero permitiendo la integración de la información.</p>
+                    </p>
+                </section>
+                
+                <section id="fuentes">
+                    <h2>Fuentes</h2>
+                    <br>
+                    <a href="http://www.monografias.com/trabajos24/arquitectura-cliente-servidor/arquitectura-cliente-servidor.shtml">1. http://www.monografias.com/trabajos24/arquitectura-cliente-servidor/arquitectura-cliente-servidor.shtml</a>
+                    <br><br>
+                    <a href="http://cervantes1bachdyg.wikispaces.com/Arquitectura+cliente-servidor">2. http://cervantes1bachdyg.wikispaces.com/Arquitectura+cliente-servidor</a>
+                    <br><br>
+                    <a href="http://www.cmg.jovenclub.cu/munic/cruz/redes/pages/arquitectura.htm">3. http://www.cmg.jovenclub.cu/munic/cruz/redes/pages/arquitectura.htm</a>
+                    <br><br>
+                    <a href="https://www.ecured.cu/Arquitectura_Cliente_Servidor#Introducci.C3.B3n">https://www.ecured.cu/Arquitectura_Cliente_Servidor#Introducci.C3.B3n</a>
+                </section>
+            </div>
+        </section>
+
+        <section id="info">
+            <h3>Nuevos Temas llegaran a nuestra web, Actualizandonos dia a dia.</h3>
+            <div class="container">
+                <div class="info-pet">
+                    <img src="img/pc.jpg" alt="">
+                </div>
+                <div class="info-pet">
+                    <img src="img/pc2.jpg" alt="">
+                </div>
+                <div class="info-pet">
+                    <img src="img/pc3.jpg" alt="">
+                </div>
+                <div class="info-pet">
+                    <img src="img/pc4.jpg" alt="">
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="copy">Juan Camilo Montero &copy; 2020</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Web</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/calculadora.css">
+</head>
+<body onload="init();">
+    <header>
+        <div class="container">
+            <h1 class="icon-codeopen">Programación Web</h1>
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>    
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="banner">
+            <img src="img/hero.jpg" alt="Programación">
+            <div class="container">
+                <h2>Aprende algo nuevo</h2>
+                <p>La mejor información esta aquí</p>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div id="container">
+                <h3>CALCULADORA WEB</h3>
+            </div>
+        </section>
+
+        <section>
+                <table class="calculadora">
+                    <tr>
+                        <td colspan="4"><span id="resultado">
+                        </span></td>
+                    </tr>
+                    <tr>
+                        <td><button id="siete">7</button></td>
+                        <td><button id="ocho">8</button></td>
+                        <td><button id="nueve">9</button></td>
+                        <td><button id="division">/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="cuatro">4</button></td>
+                        <td><button id="cinco">5</button></td>
+                        <td><button id="seis">6</button></td>
+                        <td><button id="multiplicacion">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="uno">1</button></td>
+                        <td><button id="dos">2</button></td>
+                        <td><button id="tres">3</button></td>
+                        <td><button id="resta">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="igual">=</button></td>
+                        <td><button id="reset">C</button></td>
+                        <td><button id="cero">0</button></td>
+                        <td><button id="suma">+</button></td>
+                    </tr>
+                </table>
+        </section>
+
+        <section id="info">
+            <h3>Nuevos Temas llegaran a nuestra web, Actualizandonos dia a dia.</h3>
+            <div class="container">
+                <div class="info-pet">
+                    <img src="img/pc.jpg" alt="">
+                </div>
+                <div class="info-pet">
+                    <img src="img/pc2.jpg" alt="">
+                </div>
+                <div class="info-pet">
+                    <img src="img/pc3.jpg" alt="">
+                </div>
+                <div class="info-pet">
+                    <img src="img/pc4.jpg" alt="">
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="copy">Juan Camilo Montero &copy; 2020</p>
+    </footer>
+
+    <script src="js/funcion.js"></script>
+
+</body>
+</html>
