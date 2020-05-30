@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #E9ECF4;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.buscador {
+    float: right;
+}
+
+.nombre {
+    float: left;
+}
+
+.contenedor {
+    width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "header header header"
+                         "contenido contenido sidebar"
+                         "footer footer footer";
+}
+
+.contenedor > div, 
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header{
+    background: #12203E;
+    color: #fff;
+    grid-area: header;
+}
+
+.contenedor .contenido{
+    grid-area: contenido;
+    margin-top: 0;
+}
+
+.comentarios {
+    margin-top: 3vh;
+    border:  1px solid #000;
+}
+
+p{
+    margin-top: 3vh;
+}
+
+.contenedor .sidebar {
+    grid-area: sidebar;
+    background: #fAA43D;
+    float: left;
+    list-style-type: none;
+    margin-top: 4px;
+}
+
+
+.sidebar img {
+    width: 200px;
+    float: left;
+    padding: 3px;
+}
+
+.contenedor .footer {
+    grid-area: footer;
+}
+
+.contenedor .footer{
+    display: flex;
+}
+
+.columna1,
+.columna2,
+.columna3,
+.columna4 {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 10px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+
+@media(max-width: 500px){
+    .contenedor {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-template-areas: "header"
+                             "contenido"
+                             "sidebar"
+                             "footer";
+    }
+
+    .contenedor .footer {
+        flex-wrap: wrap;
+    }
+
+    .columna1,
+    .columna2,
+    .columna3,
+    .columna4 {
+        margin: 10px;
+    }
+
+}
+
+
+
+
+@media(max-width: 800px){
+    .contenedor {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2 , auto);
+        grid-template-areas: "header header"
+                             "contenido contenido"
+                             "sidebar sidebar"
+                             "footer footer";
+    }
+    
+    .contenedor .sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .widget-4 {
+        margin-top: 60px;
+    }
+
+    .contenedor .footer {
+        flex-wrap: wrap;
+    }
+
+    .columna1,
+    .columna2,
+    .columna3,
+    .columna4 {
+        margin: 10px;
+    }
+}
